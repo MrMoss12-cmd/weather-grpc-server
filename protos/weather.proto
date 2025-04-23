@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package weather;
+
+service WeatherService {
+  rpc GetWeather (WeatherRequest) returns (WeatherResponse) {}
+  rpc UpdateWeather (UpdateWeatherRequest) returns (UpdateWeatherResponse) {}
+}
+
+message WeatherRequest {
+  string postal_code = 1;
+}
+
+message WeatherResponse {
+  string postcode = 1;
+  string subdiv_name = 2;
+  float feels_like = 3;
+  int32 rel_hum = 4;
+  float temp = 5;
+  int32 wind_dir = 6;
+  string timestamp = 7;
+}
+
+message UpdateWeatherRequest {
+  repeated string postal_codes = 1;
+}
+
+message UpdateWeatherResponse {
+  repeated string updated_postcodes = 1;
+  repeated string failed_postcodes = 2;
+  string message = 3;
+}
