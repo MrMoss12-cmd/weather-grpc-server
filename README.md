@@ -29,8 +29,7 @@ A high-performance weather data microservice using gRPC for efficient communicat
 ## Project Structure
 
  ```
-```
-
+```plaintext
 weather-grpc/
 ├── weather_grpc_server/       # gRPC server implementation
 │   ├── server.py              # Main server logic
@@ -39,8 +38,7 @@ weather-grpc/
 │   └── protos/                # Protocol Buffer definitions
 ├── weather_orm_service/       # ORM service (if separate)
 └── client/                   # Command-line client
-
-```plaintext
+```
 
 ## Getting Started
 
